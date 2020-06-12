@@ -13,10 +13,9 @@ export class AutoCompleteComponent implements OnInit {
 
   @Output('handleSearch') handleSearch = new EventEmitter();
   @Output('valueChange') valueChange = new EventEmitter();
-  // @Output('value') value: string = '';
 
   fading: boolean = false;
-  value: string;
+  value: string = '';
 
   throttleChange: () => void;
 
