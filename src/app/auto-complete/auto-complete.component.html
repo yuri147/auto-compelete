@@ -1,0 +1,11 @@
+<div class="component">
+  <div class="out-input">
+    <input type="text" (input)="onChange($event)" (blur)="onBlur()" (focus)="onFocus()" #input>
+  </div>
+
+  <div class="list" [ngClass]="{'show': searchResult.length > 0 && !fading}">
+    <ul>
+      <li *ngFor="let item of searchResult" (click)="selectItem(item)">{{item}}</li>
+    </ul>
+  </div>
+</div>
